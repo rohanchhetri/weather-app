@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="card">
+      <!-- search bar section -->
+      <div class="search-input">
+        <input type="text" class="search-bar" />
+        <span class="search-icon">
+          <img src="/src/search.png " alt="" width="20px"
+        /></span>
+      </div>
+
+      <!-- weather data section -->
+      <h2 style="font-size: 30px; margin-top: 16px">Mississauga</h2>
+      <div class="weather-img">
+        <img src="/src/clear.png" alt="" width="100%" height="100%" />
+      </div>
+      <div>
+        <h1 style="font-size: 48px; margin: 0 0 12px">22°C</h1>
+        <h2 style="text-align: center">Sunny</h2>
+      </div>
+
+      <!-- average temperature & sunrise details section -->
+      <div class="container-1">
+        <div class="containers" id="average">
+          <p>
+            <span><i class="fa-solid fa-chart-line"></i></span>Average
+          </p>
+          <h2>8°C</h2>
+          <div class="high-low">
+            <p>High</p>
+            <b>8°C</b>
+          </div>
+          <div class="high-low">
+            <p>Low</p>
+            <b>-1°C</b>
+          </div>
+        </div>
+        <div class="containers" id="sunrise">
+          <p>
+            <span><i class="fa-solid fa-mountain-sun"></i></span>Sunrise
+          </p>
+          <h2>6:54 AM</h2>
+          <span>Sunset: 6:09 PM</span>
+        </div>
+      </div>
+
+      <!-- wind details section -->
+      <div class="containers" id="wind">
+        <div style="width: 100%">
+          <p>
+            <span><i class="fa-solid fa-wind"></i></span>Wind
+          </p>
+          <h2>
+            9 <span style="font-size: 12px">KM/HR</span> <br /><span
+              style="font-size: 18px"
+              >WIND</span
+            >
+          </h2>
+          <hr width="90%" />
+          <h2>
+            18 <span style="font-size: 12px">KM/HR</span> <br /><span
+              style="font-size: 18px"
+              >GUST</span
+            >
+          </h2>
+        </div>
+        <div>
+          <i class="fa-solid fa-wind fa-2xl" style="font-size: 4em"></i>
+        </div>
+      </div>
+
+      <!-- feels like and humidity section -->
+      <div class="container-2">
+        <div class="containers" id="feels">
+          <p>
+            <span><i class="fa-solid fa-temperature-quarter"></i></span>Feels
+            Like
+          </p>
+          <h2>-2°C</h2>
+          <p>Wind is making it feel coolder.</p>
+        </div>
+        <div class="containers" id="humidity">
+          <p>
+            <span><i class="fa-solid fa-droplet"></i></span>Humidity
+          </p>
+          <h2>82%</h2>
+          <p>Humidity affets how the air feels like.</p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js">
+       const a={"coord":{"lon":-0.1257,"lat":51.5085},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04n"}],"base":"stations","main":{"temp":4.91,"feels_like":0.92,"temp_min":3.16,"temp_max":6.27,"pressure":989,"humidity":91},"visibility":10000,"wind":{"speed":5.66,"deg":130},"clouds":{"all":75},"dt":1709353237,"sys":{"type":2,"id":2075535,"country":"GB","sunrise":1709361782,"sunset":1709401347},"timezone":0,"id":2643743,"name":"London","cod":200}
+       const apiKey="13b9f444e75ffe0ef5824d11f539c63a"
+      const url="https://api.openweathermap.org/data/2.5/weather?&appid=13b9f444e75ffe0ef5824d11f539c63a&units=metric&q="
+    </script>
+  </body>
+</html>
