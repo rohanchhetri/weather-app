@@ -32,21 +32,37 @@ body {
   flex-direction: row;
   justify-content: space-between;
   opacity: 0.85;
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 }
 .search-bar {
   color: grey;
-  padding: 0 24px;
+  padding: 12px 24px;
   outline: none;
   border: none;
   border-radius: 25px;
   font-size: 24px;
 }
+.cross {
+  background: transparent;
+  margin-left: -35px;
+  padding: 5px 7px;
+  border-radius: 50%;
+}
 .search-icon {
   background: #fff;
   padding: 16px;
   border-radius: 50%;
-  img {
-    margin: 0 -0.5px -7.8px 0;
+}
+.cross:hover,
+.search-icon:hover {
+  cursor: pointer;
+  background: #4b9696;
+  i {
+    color: white;
   }
 }
 .weather-img {
